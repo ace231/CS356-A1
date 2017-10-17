@@ -6,7 +6,7 @@
  * This class creates a single choice question with the ability
  * to pick only 1 out of 4 possible answers
  */
-public class SingleChoiceQuestion implements Question{
+public class SingleChoiceQuestion implements Question {
     private String question;
     private String[] answers;
     private int maxSelection;
@@ -17,7 +17,7 @@ public class SingleChoiceQuestion implements Question{
      * first then answers, or both the question and answers at the same time.
      * Other parameters are set.
      */
-    public SingleChoiceQuestion(String q){
+    public SingleChoiceQuestion(String q) {
         question = q;
         setMaxSelection(1);
         setNumOfAnswers(4);
@@ -31,42 +31,47 @@ public class SingleChoiceQuestion implements Question{
     }
 
     @Override
-    public void setQuestion(String q){
+    public void setQuestion(String q) {
         question = q;
     }
 
     @Override
-    public String getQuestion(){
+    public String getQuestion() {
         return question;
     }
 
     @Override
-    public void setNumOfAnswers(int n){
+    public void setNumOfAnswers(int n) {
         numOfAnswers = 4;
     }
 
     @Override
-    public void setAnswers(String[] ans){
-        if(ans.length != numOfAnswers) {
+    public int getNumOfAnswers() {
+        return numOfAnswers;
+    }
+
+    @Override
+    public void setAnswers(String[] ans) {
+        if (ans.length != numOfAnswers) {
             System.out.println("Make sure 4 possible answers are being submitted!!!");
         } else {
-            for(int i = 0; i < numOfAnswers; i++){
+            for (int i = 0; i < numOfAnswers; i++) {
                 answers[i] = ans[i];
             }
         }
     }
 
     @Override
-    public void printQuestion(){
+    public void printQuestion() {
         System.out.println(question);
         String[] letters = {"A)", "B)", "C)", "D)"};
-        for (int i = 0; i < answers.length; i++){
+        for (int i = 0; i < answers.length; i++) {
             System.out.printf("%s %s%n", letters[i], answers[i]);
         }
     }
 
     @Override
-    public void setMaxSelection(int maxSelection){
+    public void setMaxSelection(int maxSelection) {
         this.maxSelection = maxSelection;
     }
 }

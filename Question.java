@@ -13,9 +13,16 @@
  */
 public interface Question {
     public void setQuestion(String q);
+
     public String getQuestion();
+
     public void setNumOfAnswers(int n);
+
+    public int getNumOfAnswers();
+
     public void setAnswers(String[] ans);
-	public void printQuestion();
-	public void setMaxSelection(int maxSelection);
+
+    public void printQuestion();
+
+    public void setMaxSelection(int maxSelection);
 }

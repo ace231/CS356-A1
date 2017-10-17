@@ -10,7 +10,7 @@
  * possible answers to be displayed to students
  * and 3 to be selected
  */
-public class MultChoiceQuestion implements Question{
+public class MultChoiceQuestion implements Question {
     /**
      * The question is stored as a String, answers are saved in an
      * array of String for quick access, the number of maximum selections
@@ -55,6 +55,11 @@ public class MultChoiceQuestion implements Question{
         numOfAnswers = n;
     }
 
+    @Override
+    public int getNumOfAnswers() {
+        return numOfAnswers;
+    }
+
     /**
      * In order to set the answers for a multiple choice question,
      * all the possible answers have to be submitted at once as an
@@ -75,7 +80,7 @@ public class MultChoiceQuestion implements Question{
     public void printQuestion() {
         System.out.print(question);
         String[] letters = {"A)", "B)", "C)", "D).", "E)"};
-        for (int i = 0; i < answers.length; i++){
+        for (int i = 0; i < answers.length; i++) {
             System.out.printf("%s %s%n", letters[i], answers[i]);
         }
     }

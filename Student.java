@@ -5,13 +5,13 @@
  * Assignment 1
  */
 public class Student {
-	private String ID;
-	
-	public Student(String id){
-		ID = id;
-	}
-	 
-	private String getID() {
-		return ID;
-	}
+    private String ID;
+
+    public Student(String id) {
+        ID = id;
+    }
+
+    private String getID() {
+        return ID;
+    }
 }
