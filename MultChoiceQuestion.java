@@ -13,12 +13,12 @@
 public class MultChoiceQuestion implements Question{
     /**
      * The question is stored as a String, answers are saved in an
-     * array of String for quick access, an integer array is used
-     * to count
+     * array of String for quick access, the number of maximum selections
+     * allowed is saved as an integer value, and the number of possible
+     * answers is also an integer
      */
     private String question;
     private String[] answers;
-    private int[] answerCount;
     private int maxSelection;
     private int numOfAnswers;
 
@@ -74,6 +74,10 @@ public class MultChoiceQuestion implements Question{
     @Override
     public void printQuestion() {
         System.out.print(question);
+        String[] letters = {"A)", "B)", "C)", "D).", "E)"};
+        for (int i = 0; i < answers.length; i++){
+            System.out.printf("%s %s%n", letters[i], answers[i]);
+        }
     }
 
     @Override
