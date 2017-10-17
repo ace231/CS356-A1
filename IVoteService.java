@@ -5,5 +5,8 @@
  * Assignment 1
  */
 public class IVoteService {
+    private Student[] students;
+    private Question question;
+
 
 }

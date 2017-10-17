@@ -20,6 +20,7 @@ public class MultChoiceQuestion implements Question{
     private String[] answers;
     private int[] answerCount;
     private int maxSelection;
+    private int numOfAnswers;
 
     /**
      * Constructors of this class must either receive a question first,
@@ -29,12 +30,14 @@ public class MultChoiceQuestion implements Question{
     public MultChoiceQuestion(String q) {
         setQuestion(q);
         setMaxSelection(3);
+        setNumOfAnswers(5);
     }
 
     public MultChoiceQuestion(String q, String[] ans) {
         question = q;
         setAnswers(ans);
         setMaxSelection(3);
+        setNumOfAnswers(5);
     }
 
     @Override
@@ -45,6 +48,11 @@ public class MultChoiceQuestion implements Question{
     @Override
     public String getQuestion() {
         return question;
+    }
+
+    @Override
+    public void setNumOfAnswers(int n) {
+        numOfAnswers = n;
     }
 
     /**
