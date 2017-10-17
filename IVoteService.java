@@ -41,8 +41,8 @@ public class IVoteService {
             this.question.setAnswers(ans);
             this.question.setNumOfAnswers(ans.length);
         } else if (qType == 1) {
-            this.question = new SingleChoiceQuestion(question);
-            this.question.setAnswers(ans);
+            this.question = new SingleChoiceQuestion(question, ans);
+            //this.question.setAnswers(ans);
             this.question.setNumOfAnswers(ans.length);
         } else {
             System.out.println("Incorrect parameters for question, please check documentation...");
@@ -113,6 +113,7 @@ public class IVoteService {
     }
 
     public void printResults() {
+        checkSubmissions();
         String[] letters = {"A","B","C","D","E"};
         for(int i = 0; i < subCount.length; i++){
             System.out.printf("%s: %d",letters[i], subCount[i]);

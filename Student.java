@@ -11,7 +11,7 @@ public class Student {
         ID = id;
     }
 
-    private String getID() {
+    public String getID() {
         return ID;
     }
 }

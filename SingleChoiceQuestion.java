@@ -27,7 +27,7 @@ public class SingleChoiceQuestion implements Question {
         question = q;
         setMaxSelection(1);
         setNumOfAnswers(4);
-        setAnswers(ans);
+        answers = ans;
     }
 
     @Override
